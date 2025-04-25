@@ -19,9 +19,9 @@ def go_to_cafe(friends: str, cafe: str) -> str:
             return "All friends should be vaccinated"
 
     if masks_to_buy > 0:
-        return f"Friends should buy {masks_to_buy} masks"
+        return "Friends should buy {masks_to_buy} masks"
     else:
-        return f"Friends can go to {cafe.name}"
+        return "Friends can go to {cafe.name}"
 
 
 if __name__ == "__main__":
