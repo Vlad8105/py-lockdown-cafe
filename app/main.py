@@ -8,7 +8,7 @@ from app.errors import (VaccineError,
 from app.cafe import Cafe
 
 
-def go_to_cafe(friends: str, cafe: str) -> str:
+def go_to_cafe(friends: list[dict], cafe: Cafe) -> str:
     masks_to_buy = 0
     for friend in friends:
         try:
@@ -19,9 +19,9 @@ def go_to_cafe(friends: str, cafe: str) -> str:
             return "All friends should be vaccinated"
 
     if masks_to_buy > 0:
-        return "Friends should buy {masks_to_buy} masks"
+        return f"Friends should buy {masks_to_buy} masks"
     else:
-        return "Friends can go to {cafe.name}"
+        return f"Friends can go to {cafe.name}"
 
 
 if __name__ == "__main__":
